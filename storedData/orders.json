@@ -1,0 +1,23 @@
+[
+    {
+        "customerName": "LG",
+        "id": 1,
+        "orderedQuantity": 300,
+        "sampleId": 1,
+        "state": "RESERVED"
+    },
+    {
+        "customerName": "SK",
+        "id": 2,
+        "orderedQuantity": 150,
+        "sampleId": 5,
+        "state": "RESERVED"
+    },
+    {
+        "customerName": "Sam",
+        "id": 3,
+        "orderedQuantity": 200,
+        "sampleId": 3,
+        "state": "RESERVED"
+    }
+]

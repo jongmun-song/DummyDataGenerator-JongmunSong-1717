@@ -1,0 +1,20 @@
+[
+    {
+        "actualProductionQuantity": 190,
+        "orderId": 1,
+        "orderedQuantity": 150,
+        "sampleId": 1,
+        "shortageQuantity": 150,
+        "state": "PRODUCING",
+        "totalProductionTime": 1143.0
+    },
+    {
+        "actualProductionQuantity": 206,
+        "orderId": 2,
+        "orderedQuantity": 200,
+        "sampleId": 2,
+        "shortageQuantity": 170,
+        "state": "WAITING",
+        "totalProductionTime": 1428.0
+    }
+]

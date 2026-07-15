@@ -1,0 +1,14 @@
+# Visual Studio
+.vs/
+*.user
+
+# Build outputs
+x64/
+x86/
+Debug/
+Release/
+DummyDat.*/
+
+# NuGet restored packages (packages.config itself is tracked)
+packages/*
+!packages/.gitkeep

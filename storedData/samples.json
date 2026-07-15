@@ -1,0 +1,37 @@
+[
+    {
+        "averageProductionTimePerUnit": 0.5,
+        "id": 1,
+        "name": "Wafer-8in",
+        "stockQuantity": 380,
+        "yieldRatio": 0.92
+    },
+    {
+        "averageProductionTimePerUnit": 0.3,
+        "id": 2,
+        "name": "GaN-4in",
+        "stockQuantity": 220,
+        "yieldRatio": 0.78
+    },
+    {
+        "averageProductionTimePerUnit": 0.8,
+        "id": 3,
+        "name": "SiC-6in",
+        "stockQuantity": 30,
+        "yieldRatio": 0.92
+    },
+    {
+        "averageProductionTimePerUnit": 0.2,
+        "id": 4,
+        "name": "Photo-PR7",
+        "stockQuantity": 910,
+        "yieldRatio": 0.95
+    },
+    {
+        "averageProductionTimePerUnit": 0.6,
+        "id": 5,
+        "name": "Wafer2-Si02",
+        "stockQuantity": 0,
+        "yieldRatio": 0.88
+    }
+]
