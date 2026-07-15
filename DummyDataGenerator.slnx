@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="DummyDataGenerator.vcxproj" Id="ab06b682-8f57-4bde-9a8c-bf653d573d84" />
+  <Project Path="DummyDataGeneratorTests.vcxproj" Id="c1e5e1d0-6b0e-4c0b-9d2e-7a2f6b0f2d10" />
+</Solution>
