@@ -8,3 +8,4 @@
 // generator header here as it is implemented.
 
 #include "DummyDataGenerator/SampleGenerator.h"
+#include "DummyDataGenerator/OrderGenerator.h"

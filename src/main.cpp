@@ -25,5 +25,22 @@ int main()
                    << '\n';
     }
 
+    DummyDataGenerator::OrderGenerationOptions orderOptions;
+    orderOptions.orderCount = 5;
+    orderOptions.seed = 42;
+
+    const auto orders = DummyDataGenerator::GenerateOrders(orderOptions, samples);
+
+    std::cout << "Generated " << orders.size() << " Order(s):\n";
+    for (const auto& order : orders)
+    {
+        std::cout << "  id=" << order.id
+                   << " sampleId=" << order.sampleId
+                   << " customerName=" << order.customerName
+                   << " orderedQuantity=" << order.orderedQuantity
+                   << " state=" << static_cast<int>(order.state)
+                   << '\n';
+    }
+
     return 0;
 }
