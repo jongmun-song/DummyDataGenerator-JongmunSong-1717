@@ -146,9 +146,13 @@
     <ClCompile Include="src\SampleGenerator.cpp" />
     <ClCompile Include="src\OrderGenerator.cpp" />
     <ClCompile Include="src\ProductionQueueEntryGenerator.cpp" />
+    <ClCompile Include="src\SampleJsonRepository.cpp" />
+    <ClCompile Include="src\OrderJsonRepository.cpp" />
+    <ClCompile Include="src\ProductionQueueEntryJsonRepository.cpp" />
     <ClCompile Include="tests\SampleGeneratorTests.cpp" />
     <ClCompile Include="tests\OrderGeneratorTests.cpp" />
     <ClCompile Include="tests\ProductionQueueEntryGeneratorTests.cpp" />
+    <ClCompile Include="tests\JsonRepositoryTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dataModel\Sample.h" />
@@ -158,6 +162,10 @@
     <ClInclude Include="include\DummyDataGenerator\SampleGenerator.h" />
     <ClInclude Include="include\DummyDataGenerator\OrderGenerator.h" />
     <ClInclude Include="include\DummyDataGenerator\ProductionQueueEntryGenerator.h" />
+    <ClInclude Include="include\DummyDataGenerator\JsonRepository.h" />
+    <ClInclude Include="include\DummyDataGenerator\SampleJsonRepository.h" />
+    <ClInclude Include="include\DummyDataGenerator\OrderJsonRepository.h" />
+    <ClInclude Include="include\DummyDataGenerator\ProductionQueueEntryJsonRepository.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
