@@ -10,3 +10,8 @@
 #include "DummyDataGenerator/SampleGenerator.h"
 #include "DummyDataGenerator/OrderGenerator.h"
 #include "DummyDataGenerator/ProductionQueueEntryGenerator.h"
+
+#include "DummyDataGenerator/JsonRepository.h"
+#include "DummyDataGenerator/SampleJsonRepository.h"
+#include "DummyDataGenerator/OrderJsonRepository.h"
+#include "DummyDataGenerator/ProductionQueueEntryJsonRepository.h"

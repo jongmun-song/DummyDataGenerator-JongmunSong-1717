@@ -12,3 +12,11 @@ DummyDat.*/
 # NuGet restored packages (packages.config itself is tracked)
 packages/*
 !packages/.gitkeep
+
+# Demo output written by src/main.cpp's Stage 6 persistence demo - never
+# storedData/, which stays a checked-in target-schema reference
+output/
+
+# Developer-local build scripts/logs (machine-specific paths)
+_build.bat
+_build.log

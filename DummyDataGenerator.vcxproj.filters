@@ -27,6 +27,15 @@
     <ClCompile Include="src\ProductionQueueEntryGenerator.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="src\SampleJsonRepository.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrderJsonRepository.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProductionQueueEntryJsonRepository.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -51,6 +60,18 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="include\DummyDataGenerator\ProductionQueueEntryGenerator.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DummyDataGenerator\JsonRepository.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DummyDataGenerator\SampleJsonRepository.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DummyDataGenerator\OrderJsonRepository.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DummyDataGenerator\ProductionQueueEntryJsonRepository.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

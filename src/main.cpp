@@ -1,20 +1,37 @@
 // Minimal console demo for DummyDataGenerator. This file is intentionally
 // thin: it only calls the public API and prints the result, so the module
 // itself stays reusable as a library by other repositories (see CLAUDE.md).
+//
+// Stage 6 (see docs/PRD.md section 8) is demonstrated here by actually
+// persisting the generated Sample/Order/ProductionQueueEntry lists to JSON
+// files via the *JsonRepository create() path - not just printing values.
+// The demo writes to output/ (relative to the working directory), never to
+// storedData/, so the checked-in example files stay untouched as the
+// target-schema reference they are meant to be.
 
+#include <filesystem>
 #include <iostream>
 
 #include "DummyDataGenerator.h"
 
 int main()
 {
-    DummyDataGenerator::SampleGenerationOptions options;
-    options.sampleCount = 5;
-    options.seed = 42;
+    // Start each demo run from a clean output/ directory so the repository
+    // ids assigned below are reproducible run-to-run.
+    const std::filesystem::path outputDirectory = "output";
+    std::filesystem::remove_all(outputDirectory);
+    std::filesystem::create_directories(outputDirectory);
 
-    const auto samples = DummyDataGenerator::GenerateSamples(options);
+    DummyDataGenerator::SampleGenerationOptions sampleOptions;
+    sampleOptions.sampleCount = 5;
+    sampleOptions.seed = 42;
 
-    std::cout << "Generated " << samples.size() << " Sample(s):\n";
+    const auto generatedSamples = DummyDataGenerator::GenerateSamples(sampleOptions);
+
+    auto sampleRepository = DummyDataGenerator::MakeSampleJsonRepository(outputDirectory / "samples.json");
+    const auto samples = DummyDataGenerator::PersistAll(sampleRepository, generatedSamples);
+
+    std::cout << "Persisted " << samples.size() << " Sample(s) to " << (outputDirectory / "samples.json") << ":\n";
     for (const auto& sample : samples)
     {
         std::cout << "  id=" << sample.id
@@ -29,9 +46,12 @@ int main()
     orderOptions.orderCount = 5;
     orderOptions.seed = 42;
 
-    const auto orders = DummyDataGenerator::GenerateOrders(orderOptions, samples);
+    const auto generatedOrders = DummyDataGenerator::GenerateOrders(orderOptions, samples);
 
-    std::cout << "Generated " << orders.size() << " Order(s):\n";
+    auto orderRepository = DummyDataGenerator::MakeOrderJsonRepository(outputDirectory / "orders.json");
+    const auto orders = DummyDataGenerator::PersistAll(orderRepository, generatedOrders);
+
+    std::cout << "Persisted " << orders.size() << " Order(s) to " << (outputDirectory / "orders.json") << ":\n";
     for (const auto& order : orders)
     {
         std::cout << "  id=" << order.id
@@ -45,9 +65,14 @@ int main()
     DummyDataGenerator::ProductionQueueEntryGenerationOptions queueOptions;
     queueOptions.seed = 42;
 
-    const auto queueEntries = DummyDataGenerator::GenerateProductionQueueEntries(queueOptions, orders, samples);
+    const auto generatedQueueEntries = DummyDataGenerator::GenerateProductionQueueEntries(queueOptions, orders, samples);
 
-    std::cout << "Generated " << queueEntries.size() << " ProductionQueueEntry(ies):\n";
+    auto queueRepository =
+        DummyDataGenerator::MakeProductionQueueEntryJsonRepository(outputDirectory / "production_queue.json");
+    const auto queueEntries = DummyDataGenerator::PersistAll(queueRepository, generatedQueueEntries);
+
+    std::cout << "Persisted " << queueEntries.size() << " ProductionQueueEntry(ies) to "
+              << (outputDirectory / "production_queue.json") << ":\n";
     for (const auto& entry : queueEntries)
     {
         std::cout << "  orderId=" << entry.orderId
