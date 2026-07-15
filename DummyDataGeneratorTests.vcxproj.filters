@@ -21,7 +21,13 @@
     <ClCompile Include="src\SampleGenerator.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="src\OrderGenerator.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="tests\SampleGeneratorTests.cpp">
+      <Filter>테스트 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\OrderGeneratorTests.cpp">
       <Filter>테스트 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -39,6 +45,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="include\DummyDataGenerator\SampleGenerator.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DummyDataGenerator\OrderGenerator.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
