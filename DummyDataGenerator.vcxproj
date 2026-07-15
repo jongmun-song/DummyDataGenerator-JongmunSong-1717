@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="src\SampleGenerator.cpp" />
     <ClCompile Include="src\OrderGenerator.cpp" />
+    <ClCompile Include="src\ProductionQueueEntryGenerator.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +155,7 @@
     <ClInclude Include="include\DummyDataGenerator.h" />
     <ClInclude Include="include\DummyDataGenerator\SampleGenerator.h" />
     <ClInclude Include="include\DummyDataGenerator\OrderGenerator.h" />
+    <ClInclude Include="include\DummyDataGenerator\ProductionQueueEntryGenerator.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -9,3 +9,4 @@
 
 #include "DummyDataGenerator/SampleGenerator.h"
 #include "DummyDataGenerator/OrderGenerator.h"
+#include "DummyDataGenerator/ProductionQueueEntryGenerator.h"

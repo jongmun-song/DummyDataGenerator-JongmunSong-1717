@@ -42,5 +42,23 @@ int main()
                    << '\n';
     }
 
+    DummyDataGenerator::ProductionQueueEntryGenerationOptions queueOptions;
+    queueOptions.seed = 42;
+
+    const auto queueEntries = DummyDataGenerator::GenerateProductionQueueEntries(queueOptions, orders, samples);
+
+    std::cout << "Generated " << queueEntries.size() << " ProductionQueueEntry(ies):\n";
+    for (const auto& entry : queueEntries)
+    {
+        std::cout << "  orderId=" << entry.orderId
+                   << " sampleId=" << entry.sampleId
+                   << " orderedQuantity=" << entry.orderedQuantity
+                   << " shortageQuantity=" << entry.shortageQuantity
+                   << " actualProductionQuantity=" << entry.actualProductionQuantity
+                   << " totalProductionTime=" << entry.totalProductionTime
+                   << " state=" << static_cast<int>(entry.state)
+                   << '\n';
+    }
+
     return 0;
 }
